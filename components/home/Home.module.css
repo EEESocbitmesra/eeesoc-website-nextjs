@@ -1,0 +1,38 @@
+.banner {
+  background: url("/images/home/banner.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+}
+
+.bannerContent {
+  padding: 11rem 0 5rem 0;
+}
+
+.squaredList {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.squaredList li {
+  list-style: initial;
+  list-style-type: square;
+}
+
+.avatarLarge {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media all and (min-width: 768px) {
+  .squaredList {
+    width: fit-content;
+  }
+}

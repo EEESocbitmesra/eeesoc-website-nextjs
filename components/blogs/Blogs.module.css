@@ -1,0 +1,120 @@
+.postsListing {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.post {
+  margin-bottom: 50px;
+}
+
+.postThumbnail {
+  height: 195px;
+  object-fit: cover;
+}
+
+.postDate {
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+
+.postFooter {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.postAuthorAvatar {
+  max-width: 40px;
+  min-width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.postAuthor::after {
+  content: "|";
+  display: inline-block;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.blogTitle:hover {
+  color: #444;
+}
+
+.postBody {
+  margin-top: 40px;
+}
+
+.postBody h2,
+.postBody h3,
+.postBody h4,
+.postBody h5,
+.postBody h6 {
+  color: #333;
+  margin-top: 2.5rem;
+}
+
+.postBody img {
+  margin: 1rem 0;
+}
+
+.postBody a {
+  text-decoration: underline;
+  color: #0d6efd;
+}
+
+.postBody li {
+  list-style: inside;
+  margin: 10px auto;
+}
+
+.postBody ul li {
+  list-style-type: disc;
+}
+
+.postBody ol li {
+  list-style-type: decimal;
+}
+
+/* Blog content's paragraph */
+.postBody p:not(.lead) {
+  font-size: 1em;
+  line-height: 1.7em;
+  color: #333;
+}
+
+.postBody blockquote {
+  font-size: 1.05em;
+  line-height: 1.7em;
+  border-color: #999;
+  border: 1px solid #eee;
+  border-left: 6px solid #635cdb;
+  padding: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.postTags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+.postTag {
+  padding: 3px 25px;
+  border: 1px solid #635cdb;
+  margin: 5px;
+  color: #635cdb;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+}

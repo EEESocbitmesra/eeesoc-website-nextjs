@@ -1,0 +1,86 @@
+export const executiveMembersList = [
+  {
+    name: "VAISHNAVI MISHRA",
+    linkedinUrl: "https://www.linkedin.com/in/vaishnavi-mishra-b4521m48/",
+    designation: "President",
+    img: "/seniors/k18/vaishnavi_di_k18.jfif",
+  },
+  {
+    name: "VIVEK DUBEY",
+    linkedinUrl: "https://www.linkedin.com/in/vd28/",
+    designation: "Joint President",
+    img: "/seniors/k18/vivek_bhaiya_k18.jfif",
+  },
+  {
+    name: "SHUVAM ADHIKARI",
+    linkedinUrl: "https://www.linkedin.com/in/shuvam-adhikary-18a505192/",
+    designation: "Vice President",
+    img: "/seniors/k18/shuvam_bhaiya_k18.jpeg",
+  },
+  {
+    name: "ROHIT SHARMA",
+    linkedinUrl: "https://www.linkedin.com/in/rohit-sharma-00b1221a0/",
+    designation: "Vice President",
+    img: "/seniors/k18/rohit_bhaiya_k18.jfif",
+  },
+  {
+    name: "ATULYA ARYA",
+    linkedinUrl: "https://www.linkedin.com/in/atulya-arya-794280186/",
+    designation: "General Secretary",
+    img: "/seniors/k18/atulya_di_k18.jfif",
+  },
+  {
+    name: "RAMYA REDDY GOTIKA",
+    linkedinUrl: null,
+    designation: "TREASURER",
+    img: "/seniors/k18/ramya_di_k18.jpeg",
+  },
+  {
+    name: "HARSH RAJ SINGH",
+    linkedinUrl: null,
+    designation: "Project Head",
+    img: "/seniors/k18/harsh_bhaiya_k18.jpg",
+  },
+  {
+    name: "VARUN DAYAL",
+    linkedinUrl: null,
+    designation: "Project Head",
+    img: "/seniors/k18/varun_bhaiya_k18.jpg",
+  },
+  {
+    name: "DEVESH PARASHAR AMAN",
+    linkedinUrl: "https://www.linkedin.com/in/devesh-parashar-aman-b841b6182/",
+    designation: "Technology Head (Core)",
+    img: "/seniors/k18/devesh_bhaiya_k18.jfif",
+  },
+  {
+    name: "DEVANSH BALDWA",
+    linkedinUrl: "https://www.linkedin.com/in/devansh-baldwa-401953178/",
+    designation: "Technology Head (Software)",
+    img: "/seniors/k18/devansh_bhaiya_k18.jfif",
+  },
+  {
+    name: "SURYANSH SINGH",
+    linkedinUrl: "https://www.linkedin.com/in/singhsuryansh12/",
+    designation: "Event Head",
+    img: "/seniors/k18/suryansh_bhaiya_k18.jfif",
+  },
+  {
+    name: "ASHUTOSH SINGH",
+    linkedinUrl: null,
+    designation: "Event Head",
+    img: "/seniors/k18/ashutosh_bhaiya_k18.jpg",
+  },
+  {
+    name: "SOUMYA SRIVASTAVA",
+    linkedinUrl: null,
+    designation: "Alumni-Relations Head",
+    img: "/seniors/k18/soumya_di_k18.jpeg",
+  },
+  {
+    name: "SAURAV KUMAR GUPTA",
+    linkedinUrl: null,
+    designation: "Alumni-Relations Head",
+    img: "/seniors/k18/saurav_bhaiya_k18.jpeg",
+  },
+];
