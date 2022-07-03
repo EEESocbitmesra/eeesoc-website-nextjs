@@ -1,5 +1,5 @@
 .banner {
-  background: url("/images/home/banner.jpg");
+  background: url('/images/home/banner.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
