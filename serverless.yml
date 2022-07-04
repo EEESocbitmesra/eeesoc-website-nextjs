@@ -1,4 +1,6 @@
 myNextApplication:
-  component: "@sls-next/serverless-component@3.7.0"
+  component: '@sls-next/serverless-component@3.7.0'
   inputs:
-    bucketRegion: "ap-south-1"
+    bucketRegion: 'ap-south-1'
+    cloudfront:
+      distributionId: 'E2QXPXJN8GFRR8'
