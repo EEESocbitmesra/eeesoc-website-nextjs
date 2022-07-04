@@ -1,19 +1,19 @@
 export const executiveMembersList = [
   {
     name: 'CHARCHIT GUPTA',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/charchit-gupta-4543751b0/',
     designation: 'President',
     img: '/seniors/k19/charchit_bhaiya_k19.jpeg',
   },
   {
     name: 'AKSHAT JAIN',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/akshat-jain-0520/',
     designation: 'Joint President',
     img: '/seniors/k19/akshat_bhaiya_k19.jpg',
   },
   {
     name: 'ADITYA SINGH',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/aditya-singh-9914b61a4/',
     designation: 'Vice President',
     img: '/seniors/k19/aditya_bhaiya_k19.jpeg',
   },
@@ -31,13 +31,13 @@ export const executiveMembersList = [
   },
   {
     name: 'KUMARI SIKHA',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/kumari-shikha-9216561b1/',
     designation: 'Event Head',
     img: '/seniors/k19/sikha_di_k19.jpeg',
   },
   {
     name: 'ALAKSHENDRA SINGH',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/alakshendra-singh/',
     designation: 'Technology Head (Core)',
     img: '/seniors/k19/alakshendra_bhaiya_k19.jpg',
   },
@@ -49,7 +49,7 @@ export const executiveMembersList = [
   },
   {
     name: 'SANJAY KUMAR MANDAL',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/sanjay-kumar-mandal-24b5551a1/',
     designation: 'Workshop Head',
     img: '/seniors/k19/sanjay_bhaiya_k19.jpeg',
   },
@@ -61,7 +61,7 @@ export const executiveMembersList = [
   },
   {
     name: 'SHIVAM SHANDILYA',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/shivam-shandilya-648112154/',
     designation: 'Alumni-Relations Head',
     img: '/seniors/k19/shivam_bhaiya_k19.jpeg',
   },
