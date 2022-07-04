@@ -25,7 +25,7 @@ export const executiveMembersList = [
   },
   {
     name: 'SUBHAM ANAND',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/sanand31',
     designation: 'TREASURER',
     img: '/seniors/k19/subham_bhaiya_k19.jpeg',
   },
@@ -43,7 +43,7 @@ export const executiveMembersList = [
   },
   {
     name: 'ANKIT KUMAR',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/ankit-kumar-3a93b5196',
     designation: 'Technology Head (Software)',
     img: '/seniors/k19/ankit_bhaiya_k19.jpeg',
   },
@@ -55,7 +55,7 @@ export const executiveMembersList = [
   },
   {
     name: 'ZEESHAN EQBAL',
-    linkedinUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/zean7/',
     designation: 'Alumni-Relations Head',
     img: '/seniors/k19/zeeshan_bhaiya_k19.jpeg',
   },
