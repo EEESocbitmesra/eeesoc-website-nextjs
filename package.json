@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "npx serverless@2.72.2"
+    "deploy": "npx serverless@2.72.2",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "fslightbox-react": "^1.6.2-2",
