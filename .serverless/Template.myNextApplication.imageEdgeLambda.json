@@ -1,0 +1,17 @@
+{
+  "name": "uplnjfk-nfc7ev",
+  "hash": "WF4IiEhjw4SghbZ4XqPLp1ugbp1IWTgFP39G9iHu++Q=",
+  "description": "Image Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "D:\\Projects\\NextJS\\eeesoc-next\\.serverless_nextjs\\image-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs14.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::910985415273:role/uplnjfk-quhqq6d"
+  },
+  "arn": "arn:aws:lambda:us-east-1:910985415273:function:uplnjfk-nfc7ev",
+  "region": "us-east-1"
+}
