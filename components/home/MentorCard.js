@@ -31,7 +31,10 @@ export default function MentorCard({ mentor }) {
             <br />
             {mentor.department}
           </p>
-          <p>Areas of Interest: {mentor.areasOfInterest.join(", ")}</p>
+          <p>
+            <strong>Areas of Interest</strong>:{" "}
+            {mentor.areasOfInterest.join(", ")}
+          </p>
         </div>
       </div>
     </div>
