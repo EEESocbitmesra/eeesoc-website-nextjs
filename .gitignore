@@ -33,3 +33,4 @@ yarn-error.log*
 .vercel
 
 .serverless_nextjs
+.test.txt

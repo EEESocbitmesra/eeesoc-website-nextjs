@@ -1,0 +1,6 @@
+# inputs:
+#   bucketRegion: "ap-south-1"
+#   bucketName: "uplnjfk-umywej"
+#   cloudfront:
+#     distributionId: "E1N3R5MIRQSJ4I"
+#     distributionId: "E1747N3WA49HAC"
