@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  body {
+    @apply text-background font-body;
+  }
+
+  nav {
+    @apply bg-blue;
+  }
+
+  footer {
+    @apply pb-16 relative border-t border-light-gray bg-footer;
+  }
+
+  p {
+    @apply leading-7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-black font-display;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+
+  a {
+    @apply text-black transition-all hover:text-purple;
+  }
+
+  button {
+    @apply focus:outline-none;
+  }
+}
+
+code * {
+  font-family: var(--code-font);
+  font-size: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Classes */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-item {
+  font-size: 0.9em;
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.text-gray {
+  color: var(--gray);
+}
+
+.bg-light-purple {
+  background-color: var(--light-purple);
+}
+
+.vertical-padding {
+  padding: 5rem 0;
+}
+
+.w-md {
+  width: 90%;
+}
+
+.shadow-container {
+  background: #fff;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+@layer components {
+  .divider {
+    @apply w-11/12 bg-purple h-px mx-auto;
+  }
+
+  .divider-small {
+    @apply w-12;
+  }
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.btn-sm {
+  padding: 10px 30px;
+}
+
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+body.modal-open {
+  overflow: visible;
+}
+
+@media all and (min-width: 768px) {
+  .w-md {
+    width: 70%;
+  }
+
+  .subheading {
+    font-size: 20px;
+  }
+}
