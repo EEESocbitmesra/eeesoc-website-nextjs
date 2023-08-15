@@ -21,13 +21,13 @@ export default function Workshop() {
         </p>
       </section>
 
-      <section className="grid items-center grid-cols-3 gap-8 mt-8">
+      {/* <section className="grid items-center grid-cols-3 gap-8 mt-8 sm:grid-cols-2 xl:grid-cols-3">
         {workshopsList.map((workshop) => (
           <WorkshopCard key={workshop.title} workshop={workshop} />
         ))}
-      </section>
+      </section> */}
 
-      <div className="flex flex-col gap-5 pb-20 mt-32">
+      <div className="flex flex-col gap-5 pb-20 mt-16">
         {workshopsList.map((workshop, index) => (
           <Fragment key={workshop.title}>
             <WorkshopItem index={index} workshop={workshop} />

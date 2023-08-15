@@ -8,7 +8,7 @@ interface Props {
 
 export default function WorkshopCard({ workshop }: Props) {
   return (
-    <div className="flex flex-col items-center col-span-3 py-6 shadow-container md:col-span-1">
+    <div className="flex flex-col items-center col-span-3 py-6 sm:col-span-1 shadow-container">
       <Image
         src={getImageSrc(workshop.cardImage)}
         alt={workshop.title + " thumbnail"}

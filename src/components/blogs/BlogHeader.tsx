@@ -11,7 +11,7 @@ interface Props {
 export default function BlogHeader({ blog }: Props) {
   return (
     <>
-      <h1 className="text-2xl md:text-3xl">{blog.title}</h1>
+      <h1 className="text-2xl xl:text-3xl">{blog.title}</h1>
 
       <div className="flex items-center gap-2 mt-4 text-sm">
         {/* Author's details */}

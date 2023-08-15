@@ -3,7 +3,7 @@ import ContactDetail from "./ContactDetail";
 
 export default function ContactDetails() {
   return (
-    <div className="col-span-5">
+    <div className="col-span-12 mt-20 xl:ml-10 xl:mt-0 xl:col-span-5">
       <div>
         <h3 className="mb-4">Contact Info</h3>
         {contacts.map((contact) => (

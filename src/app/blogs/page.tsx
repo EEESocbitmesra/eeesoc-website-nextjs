@@ -1,10 +1,9 @@
+import BlogCard from "@/components/blogs/BlogCard";
+import { pageTitle } from "@/data/constants";
+import { Blog } from "@/types/types";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import styles from "@/components/blogs/Blogs.module.css";
-import BlogCard from "@/components/blogs/BlogCard";
-import { Blog } from "@/types/types";
-import { pageTitle } from "@/data/constants";
 
 export const metadata = {
   title: `${pageTitle} | Blogs`,

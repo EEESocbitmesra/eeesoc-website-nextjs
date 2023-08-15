@@ -19,7 +19,7 @@ interface Props {
 
 export default function InterviewCard({ interview, interviewId }: Props) {
   return (
-    <div className="w-full md:w-1/3">
+    <div className="w-full xl:w-[calc(33%-16px)]">
       <div className="p-4 shadow-container">
         {/* Image */}
         <div className="mb-3">

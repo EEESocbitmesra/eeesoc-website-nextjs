@@ -15,7 +15,7 @@ export default function GalleryLayout({ image, index }: Props) {
   const [toggler, setToggler] = useState(false);
 
   return (
-    <div className="col-span-3 md:col-span-1">
+    <div className="col-span-3 xl:col-span-1">
       <FsLightbox
         toggler={toggler}
         sources={galleryPics.map((imagePath) => {

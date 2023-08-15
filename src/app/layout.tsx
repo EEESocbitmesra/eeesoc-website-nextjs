@@ -2,13 +2,7 @@ import "@/app/globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
-import {
-  Chivo,
-  Roboto_Mono,
-  Poppins,
-  Share_Tech_Mono,
-  IBM_Plex_Mono,
-} from "next/font/google";
+import { Chivo, IBM_Plex_Mono, Poppins } from "next/font/google";
 
 export const metadata = {
   title: "EEESoc BIT Mesra",

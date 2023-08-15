@@ -15,7 +15,7 @@ interface Props {
 
 export default function ProjectCard({ project }: Props) {
   return (
-    <div className="flex flex-col justify-between w-full p-3 md:w-1/3 shadow-container">
+    <div className="flex flex-col justify-between p-3 mt-4 shadow-container">
       <Image
         src={getImageSrc(project.image)}
         alt={project.name + " thumbnail"}
@@ -37,17 +37,19 @@ export default function ProjectCard({ project }: Props) {
           <div>
             <p>{project.description}</p>
 
-            <h5 className="mt-10 text-center">Useful Links:</h5>
             <div className="flex flex-col items-center gap-2 mt-2">
               {project.reportLink && (
-                <a
-                  className="text-purple hover:underline"
-                  href={project.reportLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Report
-                </a>
+                <>
+                  <h5 className="mt-10 text-center">Useful Links:</h5>
+                  <a
+                    className="text-purple hover:underline"
+                    href={project.reportLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Report
+                  </a>
+                </>
               )}
 
               {project.githubLink && (

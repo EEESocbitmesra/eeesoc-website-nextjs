@@ -8,7 +8,7 @@ interface Props {
 
 export default function MentorCard({ mentor }: Props) {
   return (
-    <div className="flex flex-col items-center col-span-2 p-8 md:col-span-1 shadow-container">
+    <div className="flex flex-col items-center col-span-2 p-8 xl:col-span-1 shadow-container">
       <Image
         src={getImageSrc(mentor.image)}
         alt={mentor.name}

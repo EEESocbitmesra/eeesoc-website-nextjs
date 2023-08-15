@@ -1,6 +1,5 @@
 import BlogContent from "@/components/blogs/BlogContent";
 import BlogHeader from "@/components/blogs/BlogHeader";
-import styles from "@/components/blogs/Blogs.module.css";
 import { Blog } from "@/types/types";
 import fs from "fs";
 import matter from "gray-matter";
@@ -35,7 +34,7 @@ export default function SingleBlog({ params }: Params) {
       <BlogContent content={content} />
 
       {/* Post tags */}
-      <div className="flex items-center gap-2 mt-12">
+      <div className="flex flex-wrap items-center gap-2 mt-12">
         {blog.tags.map((tag) => (
           <span
             className="px-6 py-1 text-sm border rounded-full border-purple text-purple"

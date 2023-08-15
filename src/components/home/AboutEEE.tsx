@@ -9,12 +9,11 @@ export default function AboutEEE() {
         <Image
           src="/images/home/eee_about_page1.png"
           alt="eeesoc-about"
-          className="col-span-12 md:col-span-5"
+          className="w-3/5 col-span-12 mx-auto xl:w-full xl:col-span-5"
           height={489}
           width={500}
-          style={{ objectFit: "contain" }}
         />
-        <p className="col-span-12 md:col-span-7">
+        <p className="col-span-12 xl:col-span-7">
           The Department of Electrical & Electronics Engineering is dedicated to
           the current needs of industry with the flexibility to tune its
           programs according to different requirements. The application of new

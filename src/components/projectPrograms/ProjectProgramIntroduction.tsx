@@ -4,17 +4,17 @@ export default function ProjectProgramIntroduction() {
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-center">Project Programs</h1>
-      <div className="grid grid-cols-12 gap-10 mt-8">
+      <div className="grid grid-cols-12 mt-8">
         <Image
           src="/images/project_programs/project_program.jpg"
           alt="Project Programme"
-          className="object-cover w-full col-span-12 rounded md:col-span-6"
-          width={540}
-          height={405}
+          className="object-cover w-full col-span-12 rounded xl:col-span-6"
+          width={400}
+          height={300}
           priority
         />
 
-        <p className="col-span-12 text-justify md:col-span-6">
+        <p className="col-span-12 mt-8 text-justify xl:mt-0 xl:col-span-6 xl:ml-8">
           In collaboration with Mathworks, the Society conducts two major
           project programmes for First and Second-year students in every
           academic session. They are mentored by their seniors who constantly

@@ -6,14 +6,12 @@ export const workshopsList: Workshop[] = [
     cardImage: "/workshop/c_workshop.png",
     contentImage: "/workshop/c.jpg",
     content: `This workshop is organized for 2nd Semester students ( On student's demand ). This workshop covers some basic topics like:
-
   -  Introduction to C
   -  Data types
   -  Arrays
   -  Pointers
   -  Strings
-  -  Loops
-    
+  -  Loops    
   Uniqueness of this workshop is that it is organized especially for EEE students and is helpful for those who don't have coding background.
   `,
   },

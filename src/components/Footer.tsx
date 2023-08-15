@@ -20,7 +20,7 @@ export default function Footer() {
 
       <div className="flex flex-col items-center w-4/5 mx-auto mt-16">
         <div className="grid w-full grid-cols-3">
-          <div className="flex flex-col items-center col-span-3 md:col-span-1">
+          <div className="flex flex-col items-center col-span-3 xl:col-span-1">
             <h3 className="mb-4">Find us here</h3>
             <address className="font-normal">
               Department of Electrical and Electronics Engineering,
@@ -32,11 +32,11 @@ export default function Footer() {
               Pin Code - 835215.
             </address>
           </div>
-          <div className="flex flex-col items-center col-span-3 mt-8 md:mt-0 md:col-span-1">
+          <div className="flex flex-col items-center col-span-3 mt-8 xl:mt-0 xl:col-span-1">
             <h3 className="mb-4">Mail us at</h3>
             <a href="mailto:eeesoc@bitmesra.ac.in">eeesoc@bitmesra.ac.in</a>
           </div>
-          <div className="flex flex-col items-center col-span-3 mt-8 md:mt-0 md:col-span-1">
+          <div className="flex flex-col items-center col-span-3 mt-8 xl:mt-0 xl:col-span-1">
             <h3 className="mb-4">Call us at</h3>
             <p>{currentPresident.mobile}</p>
           </div>

@@ -10,7 +10,7 @@ interface Props {
 
 export default function AlumniCard({ senior, year }: Props) {
   return (
-    <div className="w-full py-4 md:w-1/3">
+    <div className="w-full py-4 sm:w-1/2 xl:w-1/3">
       <a
         href={senior.linkedinUrl ?? "#"}
         target="_blank"
@@ -22,10 +22,10 @@ export default function AlumniCard({ senior, year }: Props) {
             alt={senior.name}
             height={375}
             width={375}
-            className="rounded"
+            className="w-full rounded"
           />
           <div
-            className={`${styles.contentDetails} sm-hidden rounded md:flex flex-col justify-center ${styles.fadeInBottom}`}
+            className={`${styles.contentDetails} sm-hidden rounded xl:flex flex-col justify-center ${styles.fadeInBottom}`}
           >
             <h3>{senior.name}</h3>
             <p>{senior.workplace ?? `${year - 4} PASS OUT`}</p>
