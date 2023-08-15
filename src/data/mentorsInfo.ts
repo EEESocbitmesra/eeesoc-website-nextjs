@@ -3,8 +3,7 @@ import { Mentor } from "@/types/types";
 export const mentorsInfo: Mentor[] = [
   {
     name: "Dr. Tirthadip Ghose",
-    image:
-      "https://www.bitmesra.ac.in/UploadedDocuments/usertghose/FacultyImage/FacImgb731b4f964f14b1f9be806bcefa52c97Ghose%20sir.jpg",
+    image: "/home/hod.jpg",
     profileLink:
       "https://www.bitmesra.ac.in/Display_My_Profile_00983KKj893L?id=5dfEAEKaD9j7LU9TkFLZUQ%253d%253d",
     designation: "Head",

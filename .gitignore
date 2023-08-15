@@ -34,3 +34,6 @@ yarn-error.log*
 
 .serverless_nextjs
 test.txt
+
+# Contentlayer
+.contentlayer

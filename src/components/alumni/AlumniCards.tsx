@@ -1,40 +1,28 @@
+"use client";
+
 import { BatchAlumni } from "@/types/types";
+import { useId } from "react";
 import AlumniCard from "./AlumniCard";
-import { getAlumniId } from "@/utils/getAlumniId";
 
 interface Props {
   batchWiseAlumni: BatchAlumni;
 }
 
 export default function AlumniCards({ batchWiseAlumni }: Props) {
+  const id = useId();
+
   return (
     <>
-      <section>
-        <div className="container">
-          <h4 className="text-center mt-5 fs-4">
-            Class of {batchWiseAlumni.year}
-          </h4>
-          <div className="row">
-            {batchWiseAlumni.alumni.map((senior, index) => {
-              const seniorId = getAlumniId({
-                seniorName: senior.name,
-                year: batchWiseAlumni.year,
-                index,
-              });
-
-              return (
-                <AlumniCard
-                  key={seniorId}
-                  senior={senior}
-                  year={batchWiseAlumni.year}
-                />
-              );
-            })}
-          </div>
+      <section className="w-full mt-10">
+        <h3 className="text-center">Class of {batchWiseAlumni.year}</h3>
+        <div className="flex flex-wrap items-center justify-center w-full">
+          {batchWiseAlumni.alumni.map((senior) => (
+            <AlumniCard key={id} senior={senior} year={batchWiseAlumni.year} />
+          ))}
         </div>
       </section>
 
-      <div className="divider divider-small mt-5"></div>
+      <div className="mt-10 divider divider-small"></div>
     </>
   );
 }

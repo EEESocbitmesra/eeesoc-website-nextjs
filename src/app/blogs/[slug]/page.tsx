@@ -27,7 +27,7 @@ export default function SingleBlog({ params }: Params) {
   const blog = matterMarkdown.data as Blog;
 
   return (
-    <div className="mx-auto w-md vertical-padding mt-5 col-lg-8">
+    <div className="items-stretch wrapper">
       {/* Blog title */}
       <BlogHeader blog={blog} />
 
@@ -35,9 +35,12 @@ export default function SingleBlog({ params }: Params) {
       <BlogContent content={content} />
 
       {/* Post tags */}
-      <div className={styles.postTags}>
+      <div className="flex items-center gap-2 mt-12">
         {blog.tags.map((tag) => (
-          <span className={styles.postTag} key={tag}>
+          <span
+            className="px-6 py-1 text-sm border rounded-full border-purple text-purple"
+            key={tag}
+          >
             {tag}
           </span>
         ))}

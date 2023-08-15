@@ -24,17 +24,13 @@ export default function Blogs() {
   });
 
   return (
-    <div className="vertical-padding pb-3 pb-lg-5 mt-5">
-      <h1 className="text-center fs-1">Blogs</h1>
+    <div className="wrapper">
+      <h1 className="text-center">Blogs</h1>
 
-      <div className={`mx-auto mt-5 col-lg-10 ${styles.postsListing}`}>
-        <div className="container">
-          <div className="row">
-            {blogs.map((blog) => (
-              <BlogCard key={blog.slug} blog={blog} />
-            ))}
-          </div>
-        </div>
+      <div className="flex flex-wrap items-stretch justify-center w-full gap-4 mt-8">
+        {blogs.map((blog) => (
+          <BlogCard key={blog.slug} blog={blog} />
+        ))}
       </div>
     </div>
   );

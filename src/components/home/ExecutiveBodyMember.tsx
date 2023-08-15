@@ -1,7 +1,6 @@
 import { ExecutiveBodyMember } from "@/types/types";
-import styles from "./Home.module.css";
-import Image from "next/image";
 import { getImageSrc } from "@/utils/getImageSrc";
+import Image from "next/image";
 
 interface Props {
   member: ExecutiveBodyMember;
@@ -9,15 +8,15 @@ interface Props {
 
 export default function ExecutiveBodyMember({ member }: Props) {
   return (
-    <div className="col-span-2 md:col-span-1 flex flex-col items-center">
+    <div className="flex flex-col items-center col-span-2 md:col-span-1">
       <Image
         src={getImageSrc(member.image)}
         alt={member.name}
         height={300}
         width={300}
-        className="rounded-full aspect-square object-cover"
+        className="object-cover rounded-full aspect-square"
       />
-      <h3 className="text-xl mt-8">
+      <h4 className="mt-8">
         {member.linkedinUrl ? (
           <a
             href={member.linkedinUrl}
@@ -29,13 +28,13 @@ export default function ExecutiveBodyMember({ member }: Props) {
         ) : (
           member.name
         )}
-      </h3>
-      <span className="mt-3">{member.designation}</span>
+      </h4>
+      <span className="mt-1 text-neutral-600">{member.designation}</span>
     </div>
   );
 
   // return (
-  //   <div className="col-lg-6 d-flex flex-column align-items-center mt-6 mt-lg-4">
+  //   <div className="mt-6 col-lg-6 d-flex flex-column align-items-center mt-lg-4">
   //     <Image
   //       src={getImageSrc(member.image)}
   //       alt={member.name}
@@ -44,7 +43,7 @@ export default function ExecutiveBodyMember({ member }: Props) {
   //       style={{ objectFit: "cover" }}
   //       className={"img-fluid rounded-circle " + styles.avatarLarge}
   //     />
-  //     <div className="text-center mt-3 p-3">
+  //     <div className="p-3 mt-3 text-center">
   //       <h4>
   //         {member.linkedinUrl ? (
   //           <a

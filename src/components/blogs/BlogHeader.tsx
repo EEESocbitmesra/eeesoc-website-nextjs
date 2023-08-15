@@ -1,7 +1,8 @@
 import { Blog } from "@/types/types";
-import styles from "./Blogs.module.css";
-import Image from "next/image";
 import { getImageSrc } from "@/utils/getImageSrc";
+import Image from "next/image";
+import { BsDot } from "react-icons/bs";
+import { FaClock } from "react-icons/fa";
 
 interface Props {
   blog: Blog;
@@ -10,28 +11,25 @@ interface Props {
 export default function BlogHeader({ blog }: Props) {
   return (
     <>
-      <h1 className={`${styles.blogTitle} mt-5`}>{blog.title}</h1>
+      <h1 className="text-2xl md:text-3xl">{blog.title}</h1>
 
-      <div className={`${styles.postFooter} mt-4`}>
+      <div className="flex items-center gap-2 mt-4 text-sm">
         {/* Author's details */}
-        <div className="flex-wrap d-flex align-items-center">
-          <div className={styles.postAuthorAvatar}>
-            <Image
-              src={getImageSrc(blog.author.avatar)}
-              alt="Author profile avatar"
-              height={40}
-              width={40}
-              className="img-fluid"
-            />
-          </div>
-          <div className={styles.postAuthor}>
-            <span className="fs-6">{blog.author.name}</span>
-          </div>
+        <div className="flex items-center gap-4">
+          <Image
+            src={getImageSrc(blog.author.avatar)}
+            alt="Author profile avatar"
+            height={30}
+            width={30}
+            className="object-cover rounded-full aspect-square"
+          />
+          <span>{blog.author.name}</span>
         </div>
 
-        {/* Blog date */}
-        <div className="d-flex align-items-center gap-2">
-          <i className="fa-regular fa-clock"></i>
+        <BsDot className="text-xl" />
+
+        <div className="flex items-center gap-1 text-neutral-700">
+          <FaClock />
           <span>{blog.date}</span>
         </div>
       </div>

@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       display: ["var(--headings-font)", "system-ui"],
       body: ["var(--body-font)", "system-ui"],
+      code: ["var(--code-font)", "consolas"],
     },
     extend: {
       backgroundImage: {

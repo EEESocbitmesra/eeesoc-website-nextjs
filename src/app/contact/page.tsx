@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <section className="my-16 w-5/6 md:w-4/5 mx-auto">
-      <h2 className="text-3xl md:text-4xl">Get in touch</h2>
+    <section className="items-stretch wrapper">
+      <h1>Get in touch</h1>
       <p className="mt-2">
         Have a project on mind? Want to collaborate with us?
       </p>
@@ -17,7 +17,7 @@ export default function Contact() {
         Don&apos;t hesistate to contact us. Let&apos;s have a talk together.
       </p>
 
-      <div className="grid gap-20 grid-cols-12 mt-8">
+      <div className="grid grid-cols-12 gap-20 mt-8">
         <MailForm />
         <ContactDetails />
       </div>

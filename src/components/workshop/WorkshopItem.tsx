@@ -1,8 +1,8 @@
+import Markdown from "markdown-to-jsx";
+
 import { Workshop } from "@/types/types";
 import { getImageSrc } from "@/utils/getImageSrc";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
-import styles from "./Workshop.module.css";
 
 interface Props {
   workshop: Workshop;
@@ -11,15 +11,25 @@ interface Props {
 
 export default function WorkshopItem({ workshop, index }: Props) {
   return (
-    <div className="grid grid-cols-2 gap-20 md:flex-row items-center">
+    <div className="grid items-center grid-cols-2 gap-20 md:flex-row">
       <div
         className={`${
           index % 2 === 0 ? "order-first" : "order-first md:order-last"
         } col-span-2 md:col-span-1`}
       >
-        <h1 className="mb-3 text-2xl md:text-3xl">{workshop.title}</h1>
-        <div className={styles.workshopContent}>
-          <ReactMarkdown>{workshop.content}</ReactMarkdown>
+        <h2 className="mb-3">{workshop.title}</h2>
+        <div>
+          <Markdown
+            options={{
+              overrides: {
+                ul: { props: { className: "list-square" } },
+                ol: { props: { className: "list-decimal" } },
+                li: { props: { className: "list-inside" } },
+              },
+            }}
+          >
+            {workshop.content}
+          </Markdown>
         </div>
       </div>
 
@@ -33,7 +43,7 @@ export default function WorkshopItem({ workshop, index }: Props) {
           alt={workshop.title}
           width={648}
           height={365}
-          className="rounded object-contain"
+          className="object-contain rounded"
         />
       </div>
     </div>

@@ -10,22 +10,22 @@ interface Props {
 
 export default function AlumniCard({ senior, year }: Props) {
   return (
-    <div className="py-4 col-lg-4 mb-3 mb-lg-0 col-md-6">
+    <div className="w-full py-4 md:w-1/3">
       <a
         href={senior.linkedinUrl ?? "#"}
         target="_blank"
         rel="noopener noreferrer"
       >
         <div className={styles.content}>
-          {/* <div className={styles.contentOverlay} /> */}
           <Image
             src={getImageSrc(senior.image)}
             alt={senior.name}
             height={375}
             width={375}
+            className="rounded"
           />
           <div
-            className={`${styles.contentDetails} d-sm-none d-md-flex flex-column justify-content-center ${styles.fadeInBottom}`}
+            className={`${styles.contentDetails} sm-hidden rounded md:flex flex-col justify-center ${styles.fadeInBottom}`}
           >
             <h3>{senior.name}</h3>
             <p>{senior.workplace ?? `${year - 4} PASS OUT`}</p>
@@ -33,12 +33,12 @@ export default function AlumniCard({ senior, year }: Props) {
           </div>
         </div>
       </a>
-      <div className={`text-center d-lg-none mt-3 ${styles.visibleDetails}`}>
-        <h3 className="fs-5">{senior.name}</h3>
-        <h6 className="fw-normal">
+      <div className={`text-center lg:hidden mt-3 ${styles.visibleDetails}`}>
+        <h4>{senior.name}</h4>
+        <h6 className="font-normal">
           {senior.workplace ?? `${year - 4} PASS OUT`}
         </h6>
-        <h6 className="fw-normal text-muted">{senior?.position}</h6>
+        <h6 className="font-normal text-neutral-500">{senior?.position}</h6>
       </div>
     </div>
   );

@@ -14,15 +14,15 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="pt-20 pb-0 flex flex-col items-center bg-footer">
-      <h2 className="text-2xl md:text-3xl">Connect with us</h2>
-      <div className="divider mt-2 divider-small"></div>
+    <footer className="flex flex-col items-center pt-20 pb-0 bg-footer">
+      <h2>Connect with us</h2>
+      <div className="mt-2 divider divider-small"></div>
 
-      <div className="w-4/5 mx-auto flex flex-col mt-16 items-center">
-        <div className="grid grid-cols-3 w-full">
-          <div className="flex flex-col col-span-3 md:col-span-1 items-center">
-            <h4 className="text-2xl mb-4">Find us here</h4>
-            <address>
+      <div className="flex flex-col items-center w-4/5 mx-auto mt-16">
+        <div className="grid w-full grid-cols-3">
+          <div className="flex flex-col items-center col-span-3 md:col-span-1">
+            <h3 className="mb-4">Find us here</h3>
+            <address className="font-normal">
               Department of Electrical and Electronics Engineering,
               <br />
               Birla Institute of Technology, Mesra
@@ -32,17 +32,17 @@ export default function Footer() {
               Pin Code - 835215.
             </address>
           </div>
-          <div className="flex mt-8 md:mt-0 flex-col col-span-3 md:col-span-1 items-center">
-            <h4 className="text-2xl mb-4">Mail us at</h4>
+          <div className="flex flex-col items-center col-span-3 mt-8 md:mt-0 md:col-span-1">
+            <h3 className="mb-4">Mail us at</h3>
             <a href="mailto:eeesoc@bitmesra.ac.in">eeesoc@bitmesra.ac.in</a>
           </div>
-          <div className="flex flex-col mt-8 md:mt-0 col-span-3 md:col-span-1 items-center">
-            <h4 className="text-2xl mb-4">Call us at</h4>
+          <div className="flex flex-col items-center col-span-3 mt-8 md:mt-0 md:col-span-1">
+            <h3 className="mb-4">Call us at</h3>
             <p>{currentPresident.mobile}</p>
           </div>
         </div>
 
-        <h4 className="text-2xl mt-10">Social Links</h4>
+        <h3 className="mt-10">Social Links</h3>
         <div className="flex items-center gap-6 mt-4">
           <a href={facebookUrl} target="_blank" rel="noopener">
             <RiFacebookFill className="text-2xl" />
@@ -59,14 +59,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t mt-20 py-5 border-light-gray flex items-center w-full text-center tracking-widest justify-center">
+      <div className="flex items-center justify-center w-full py-5 mt-20 tracking-widest text-center border-t border-light-gray">
         Copyright &#169; {currentYear}
       </div>
     </footer>
   );
 
   // return (
-  //   <footer className="vertical-padding pb-4">
+  //   <footer className="pb-4 vertical-padding">
   //     <div className={styles.bgWrap}>
   //       <Image
   //         src="/images/footer_bg.png"
@@ -79,8 +79,8 @@ export default function Footer() {
   //       <h4 className="text-center fs-2">Connect with us</h4>
   //       <div className="divider divider-small" />
 
-  //       <div className="row mt-5">
-  //         <div className="col-lg-4 text-center">
+  //       <div className="mt-5 row">
+  //         <div className="text-center col-lg-4">
   //           <h4>Find us here</h4>
   //           <address className="mt-4">
   //             Department of Electrical and Electronics Engineering,
@@ -93,7 +93,7 @@ export default function Footer() {
   //           </address>
   //         </div>
 
-  //         <div className="col-lg-4 mt-4 mt-lg-0 text-center">
+  //         <div className="mt-4 text-center col-lg-4 mt-lg-0">
   //           <h4>Mail us at</h4>
   //           <p className="mt-4">
   //             <a className="link-dark" href="mailto:eeesoc@bitmesra.ac.in">
@@ -102,14 +102,14 @@ export default function Footer() {
   //           </p>
   //         </div>
 
-  //         <div className="col-lg-4 mt-4 mt-lg-0 text-center">
+  //         <div className="mt-4 text-center col-lg-4 mt-lg-0">
   //           <h4>Call us at</h4>
   //           <p className="mt-4">{currentPresident.mobile}</p>
   //         </div>
 
   //         <div className="mt-4">
   //           <h4 className="text-center">Social Links</h4>
-  //           <div className="d-flex justify-content-center gap-4 mt-4">
+  //           <div className="gap-4 mt-4 d-flex justify-content-center">
   //             <div>
   //               <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
   //                 <i className="fa-brands fa-facebook-f fa-lg text-dark"></i>

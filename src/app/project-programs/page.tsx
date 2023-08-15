@@ -11,16 +11,14 @@ export const metadata = {
 export default function ProjectProgrammes() {
   return (
     <>
-      <div className="vertical-padding">
+      <div className="wrapper">
         <ProjectProgramIntroduction />
       </div>
 
-      <section className="bg-light-purple vertical-padding">
-        <div className="container">
-          <div className="row">
-            <ProjectProgram program={sppProjects} />
-            <ProjectProgram program={smpProjects} />
-          </div>
+      <section className="py-16 mx-auto mt-20 bg-light-purple">
+        <div className="flex flex-col items-stretch w-full gap-8 mx-auto md:w-4/5">
+          <ProjectProgram program={sppProjects} />
+          <ProjectProgram program={smpProjects} />
         </div>
       </section>
     </>

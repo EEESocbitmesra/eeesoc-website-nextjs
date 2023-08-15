@@ -1,9 +1,0 @@
-.sendBtn {
-  width: 100%;
-}
-
-@media all and (min-width: 960px) {
-  .sendBtn {
-    width: auto;
-  }
-}

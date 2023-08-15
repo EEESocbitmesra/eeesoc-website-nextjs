@@ -1,7 +1,16 @@
+import parse from "html-react-parser";
+
 import { Interview } from "@/types/types";
 import { getImageSrc } from "@/utils/getImageSrc";
 import Image from "next/image";
-import InterviewModal from "./InterviewModal";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTrigger,
+} from "../ui/dialog";
 
 interface Props {
   interview: Interview;
@@ -10,8 +19,8 @@ interface Props {
 
 export default function InterviewCard({ interview, interviewId }: Props) {
   return (
-    <div className="col-lg-4 row-sm-6 mb-4 col-md-6">
-      <div className="shadow-container p-4">
+    <div className="w-full md:w-1/3">
+      <div className="p-4 shadow-container">
         {/* Image */}
         <div className="mb-3">
           <Image
@@ -19,22 +28,47 @@ export default function InterviewCard({ interview, interviewId }: Props) {
             alt={interview.name}
             height={333}
             width={333}
-            style={{ objectFit: "contain" }}
+            className="object-cover w-full aspect-square"
           />
         </div>
 
-        {/* Button to open interview modal */}
-        <button
-          type="button"
-          className="btn btn-outline-info btn-sm"
-          data-bs-toggle="modal"
-          data-bs-target={`#${interviewId}`}
-        >
-          {interview.company}
-        </button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <button className="w-full px-4 py-3 mt-4 text-sm font-medium uppercase transition-all rounded text-blue hover:bg-blue hover:text-white">
+              {interview.company}
+            </button>
+          </DialogTrigger>
+          <DialogContent className="max-h-[80vh] min-w-[60vw] overflow-y-scroll">
+            <DialogHeader className="font-semibold uppercase">
+              {interview.name}
+            </DialogHeader>
+            <DialogDescription>{interview.company}</DialogDescription>
+            <div className="w-full divider bg-gray" />
+            <div>
+              <p>{parse(interview.interviewContent)}</p>
 
-        {/* Interview Modal */}
-        <InterviewModal interview={interview} interviewId={interviewId} />
+              <div className="flex flex-col items-center mt-8">
+                <h5>Links:</h5>
+                <a
+                  className="mb-3 text-center text-purple"
+                  href={interview.facebookInterviewLink ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook Link
+                </a>
+              </div>
+            </div>
+
+            <div className="w-full divider bg-gray" />
+
+            <DialogFooter>
+              <button className="px-4 py-2 rounded text-neutral-500 hover:bg-neutral-500 hover:text-white">
+                Close
+              </button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );

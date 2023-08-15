@@ -7,18 +7,14 @@ interface Props {
 
 export default function FieldWiseInterviews({ fieldWiseInterviews }: Props) {
   return (
-    <div className="container">
-      <div className="row mb-5">
-        <div className="py-5 px-3 px-md-5 mb-12 rounded shadow-container">
-          <h4>{fieldWiseInterviews.field}</h4>
-          <div className="divider divider-small my-3"></div>
-          <p className="text-start">{fieldWiseInterviews.description}</p>
+    <div className="p-8 rounded shadow-container">
+      <h3>{fieldWiseInterviews.field}</h3>
+      <div className="my-3 divider divider-small"></div>
+      <p className="text-justify">{fieldWiseInterviews.description}</p>
 
-          <YearWiseInterviews
-            yearWiseInterviews={fieldWiseInterviews.interviewCollections}
-          />
-        </div>
-      </div>
+      <YearWiseInterviews
+        yearWiseInterviews={fieldWiseInterviews.interviewCollections}
+      />
     </div>
   );
 }

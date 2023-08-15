@@ -1,8 +1,8 @@
 import WorkshopCard from "@/components/workshop/WorkshopCard";
-import WorkshopIntroduction from "@/components/workshop/WorkshopIntroduction";
-import WorkshopItems from "@/components/workshop/WorkshopItems";
+import WorkshopItem from "@/components/workshop/WorkshopItem";
 import { pageTitle } from "@/data/constants";
 import { workshopsList } from "@/data/workshopsList";
+import { Fragment } from "react";
 
 export const metadata = {
   title: `${pageTitle} | Workshops`,
@@ -10,14 +10,35 @@ export const metadata = {
 
 export default function Workshop() {
   return (
-    <div className="mt-16 w-5/6 md:w-4/5 mx-auto">
-      <WorkshopIntroduction />
-      <section className="grid grid-cols-3 mt-8 gap-8 items-center">
+    <div className="items-stretch wrapper">
+      <section>
+        <h2 className="text-center">Workshops</h2>
+        <p className="mt-4 text-justify">
+          The society aims in imparting branch specific technical knowledge to
+          the students of EEE. We conduct various workshops related to various
+          fields of Electrical Engineering such as MATLAB, SIMULINK, Machine
+          Learning, and Image processing workshop.
+        </p>
+      </section>
+
+      <section className="grid items-center grid-cols-3 gap-8 mt-8">
         {workshopsList.map((workshop) => (
           <WorkshopCard key={workshop.title} workshop={workshop} />
         ))}
       </section>
-      <WorkshopItems />
+
+      <div className="flex flex-col gap-5 pb-20 mt-32">
+        {workshopsList.map((workshop, index) => (
+          <Fragment key={workshop.title}>
+            <WorkshopItem index={index} workshop={workshop} />
+
+            {/* Remove divider for last element */}
+            {index !== workshopsList.length - 1 && (
+              <div className="divider bg-light-gray my-8 w-full h-[2px]"></div>
+            )}
+          </Fragment>
+        ))}
+      </div>
     </div>
   );
 }

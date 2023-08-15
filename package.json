@@ -11,16 +11,22 @@
     "deploy": "npx serverless@2.72.2"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.4",
     "bootstrap": "^5.3.1",
+    "clsx": "^2.0.0",
     "fslightbox-react": "^1.7.6",
     "gray-matter": "^4.0.3",
     "html-react-parser": "^4.2.1",
+    "markdown-to-jsx": "^7.3.2",
+    "nanoid": "^4.0.2",
     "next": "^13.4.13",
+    "next-contentlayer": "^0.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-markdown": "^8.0.7",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@types/fslightbox-react": "^1.7.3",

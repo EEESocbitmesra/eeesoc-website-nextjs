@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function Alumni() {
   return (
-    <div className="vertical-padding">
-      <h1 className="mt-5 text-center fs-1">Our Alumni</h1>
+    <div className="wrapper">
+      <h1 className="text-center">Our Alumni</h1>
       {alumniList.map((batchWiseAlumni) => (
         <AlumniCards
           key={`Class of ${batchWiseAlumni.year}`}

@@ -2,33 +2,30 @@ import Image from "next/image";
 
 export default function ProjectProgramIntroduction() {
   return (
-    <div className="container mt-5">
-      <h1 className="text-center fs-1">Project Programmes</h1>
-      <div className="d-flex flex-column align-items-center flex-lg-row mt-5 justify-content-center gap-5">
-        <div className="col-lg-5">
-          <Image
-            src="/images/projectProgrammes/project_programme.jpg"
-            alt="Project Programme"
-            width={540}
-            height={405}
-            priority
-          />
-        </div>
+    <div className="flex flex-col items-center">
+      <h1 className="text-center">Project Programs</h1>
+      <div className="grid grid-cols-12 gap-10 mt-8">
+        <Image
+          src="/images/project_programs/project_program.jpg"
+          alt="Project Programme"
+          className="object-cover w-full col-span-12 rounded md:col-span-6"
+          width={540}
+          height={405}
+          priority
+        />
 
-        <div className="col-lg-7">
-          <p className="subheading">
-            In collaboration with Mathworks, the Society conducts two major
-            project programmes for First and Second-year students in every
-            academic session. They are mentored by their seniors who constantly
-            monitor the progress and provide technical guidance. Some of the
-            best projects done by EEE students have, in fact, been done under
-            the umbrella of these project programmes, for some years now these
-            projects have filled the resumes of some of the best-placed students
-            in our department. Many of these projects had not been attempted
-            before and the knowledge that has been accumulated through research
-            and hard work is being passed on to the juniors too.
-          </p>
-        </div>
+        <p className="col-span-12 text-justify md:col-span-6">
+          In collaboration with Mathworks, the Society conducts two major
+          project programmes for First and Second-year students in every
+          academic session. They are mentored by their seniors who constantly
+          monitor the progress and provide technical guidance. Some of the best
+          projects done by EEE students have, in fact, been done under the
+          umbrella of these project programmes, for some years now these
+          projects have filled the resumes of some of the best-placed students
+          in our department. Many of these projects had not been attempted
+          before and the knowledge that has been accumulated through research
+          and hard work is being passed on to the juniors too.
+        </p>
       </div>
     </div>
   );

@@ -3,8 +3,8 @@ import FieldWiseInterviews from "./FieldWiseInterviews";
 
 export default function AllInterviews() {
   return (
-    <section className="bg-light-purple vertical-padding">
-      <div className="container">
+    <section className="py-4 bg-light-purple">
+      <div className="gap-8 wrapper">
         {compiledInterviews.map((fieldWiseInterviews) => (
           <FieldWiseInterviews
             key={fieldWiseInterviews.field}

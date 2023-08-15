@@ -7,19 +7,18 @@ interface Props {
 export default function ContactDetail({ contact }: Props) {
   return (
     <div className="flex flex-col mb-4">
-      {/* LinkedinUrl, name and designation */}
       <span>
         <a
-          className="link-primary"
+          className="text-purple hover:underline"
           href={contact.linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {contact.name}{" "}
-        </a>
-        ({contact.designation}){/* Contact no */}
+          {contact.name}
+        </a>{" "}
+        ({contact.designation})
       </span>
-      <div className="text-neutral-600">{contact.mobile}</div>
+      <div className="text-sm text-neutral-600">{contact.mobile}</div>
     </div>
   );
 }

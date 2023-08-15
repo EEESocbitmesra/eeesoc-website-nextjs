@@ -5,17 +5,15 @@ export default function ContactDetails() {
   return (
     <div className="col-span-5">
       <div>
-        <h4 className="text-xl mb-4 md:text-2xl">Contact Info</h4>
+        <h3 className="mb-4">Contact Info</h3>
         {contacts.map((contact) => (
           <ContactDetail key={contact.mobile} contact={contact} />
         ))}
       </div>
 
-      <div className="mt-5 mt-lg-4">
-        <h4 className="text-xl md:text-2xl">Contact Mail</h4>
-        <a href="mailto:eeesoc@bitmesra.ac.in" className="text-purple">
-          eeesoc@bitmesra.ac.in
-        </a>
+      <div className="mt-8 mt-lg-4">
+        <h3>Contact Mail</h3>
+        <a href="mailto:eeesoc@bitmesra.ac.in">eeesoc@bitmesra.ac.in</a>
       </div>
     </div>
   );

@@ -1,56 +1,56 @@
-import { getImageSrc } from "@/utils/getImageSrc";
+"use client";
+
+import Markdown from "markdown-to-jsx";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import styles from "./Blogs.module.css";
+import { atomDark as codeStyle } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface Props {
   content: string;
 }
 
+const Code = ({ className, children }: any) => {
+  const language = className.replace("lang-", "");
+
+  return (
+    <SyntaxHighlighter language={language} style={codeStyle}>
+      {children}
+    </SyntaxHighlighter>
+  );
+};
+
 export default function BlogContent({ content }: Props) {
   return (
-    <div className={styles.postBody}>
-      <ReactMarkdown
-        components={{
-          // Add syntax highlighting to codes in markdown
-          code: ({ node, inline, className, children, ...props }) => {
-            const match = /language-(\w+)/.exec(className || "");
-            return !inline && match ? (
-              // eslint-disable-next-line react/no-children-prop
-              <SyntaxHighlighter language={match[1]}>
-                {String(children).replace(/\n$/, "")}
-              </SyntaxHighlighter>
-            ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
-            );
-          },
-
-          // Find images in markdown and display them as next/image
-          // Images are present inside p tags
-          p: (paragraph) => {
-            const { node } = paragraph;
-            if ((node.children[0] as any).tagName === "img") {
-              const image = node.children[0];
-
-              return (
-                <Image
-                  src={getImageSrc((image as any).properties.src)}
-                  alt={content.substring(0, 20)}
-                  height={432}
-                  width={768}
-                  style={{ objectFit: "cover" }}
-                />
-              );
-            }
-            return <p>{paragraph.children}</p>;
+    <div className="mt-10">
+      <Markdown
+        options={{
+          overrides: {
+            h1: { props: { className: "mt-10" } },
+            h2: { props: { className: "mt-10" } },
+            h3: { props: { className: "mt-10" } },
+            h4: { props: { className: "mt-10" } },
+            h5: { props: { className: "mt-10" } },
+            h6: { props: { className: "mt-10" } },
+            ol: { props: { className: "list-decimal" } },
+            ul: { props: { className: "list-disc" } },
+            li: { props: { className: "list-inside mt-4" } },
+            a: { props: { className: "text-blue" } },
+            p: { props: { className: "my-4" } },
+            img: {
+              component: Image,
+              props: {
+                width: 768,
+                alt: "image of blog",
+                height: 432,
+                className: "object-cover my-4 rounded",
+              },
+            },
+            code: Code,
           },
         }}
       >
         {content}
-      </ReactMarkdown>
+      </Markdown>
     </div>
   );
 }
